@@ -7,7 +7,8 @@
 
 ---
 
-## 📋 Roteiro Final (com explicações rápidas)
+## Repositório do (StormEye) App:
+https://github.com/ThamiresRC/StormEye
 
 ### 1. Atualizar VM e instalar pacotes básicos
 ```bash
