@@ -164,3 +164,49 @@ docker compose ps
 ➡️ Permite validar endpoints da aplicação e executar CRUD no banco via phpMyAdmin.
 
 ---
+
+# 📊 Testes CRUD no MySQL
+
+Nesta seção estão os comandos SQL utilizados para validar o funcionamento do CRUD no banco de dados `stormeye`, especificamente na tabela **catastrofe**.
+
+---
+
+## ➕ Inserir (CREATE)
+
+```sql
+INSERT INTO catastrofe (descricao, localizacao, nivel_gravidade, nome_catastrofe)
+VALUES ('Tempestade forte', 'São Paulo', 3, 'Tempestade de verão');
+```
+
+---
+
+## 📖 Consultar (READ)
+
+```sql
+SELECT * FROM catastrofe;
+```
+
+---
+
+## ✏️ Atualizar (UPDATE)
+
+```sql
+UPDATE catastrofe
+SET nivel_gravidade = 4, descricao = 'Tempestade muito forte'
+WHERE id_catastrofe = (Inserir número do ID);
+```
+
+---
+
+## ❌ Deletar (DELETE)
+
+```sql
+DELETE FROM catastrofe 
+WHERE id_catastrofe = (Inserir número do ID);
+```
+
+---
+
+📌 **Observação:**  
+- O campo `id_catastrofe` é a chave primária da tabela, por isso deve ser usado para identificar o registro correto no momento de atualizar ou deletar.  
+- Estes testes podem ser realizados diretamente no **phpMyAdmin** (http://SEU_IP:8081) ou via terminal MySQL dentro do container.
